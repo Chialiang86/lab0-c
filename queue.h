@@ -40,6 +40,11 @@ typedef struct {
 queue_t *q_new();
 
 /*
+ * initialize an element
+ */
+list_ele_t *_add_ele(const char *str);
+
+/*
  * Free ALL storage used by queue.
  * No effect if q is NULL
  */
