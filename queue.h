@@ -33,6 +33,16 @@ typedef struct {
     /* TODO: Remove the above comment when you are about to implement. */
 } queue_t;
 
+// typedef struct {
+//     list_ele_t *q[8192];
+//     unsigned head;
+//     unsigned tail;
+// } circular_queue_t;
+
+// void push(list_ele_t * ele);
+
+// list_ele_t *pop();
+
 /* Operations on queue */
 
 /*
@@ -44,7 +54,7 @@ queue_t *q_new();
 /*
  * initialize an element
  */
-// list_ele_t *add_ele(const char *str);
+list_ele_t *add_ele(const char *str);
 
 /*
  * Free ALL storage used by queue.
@@ -102,5 +112,8 @@ void q_reverse(queue_t *q);
  */
 void q_sort(queue_t *q);
 
+void merge_sort(queue_t **q);
+
+list_ele_t *merge(list_ele_t *lpart, list_ele_t *rpart, list_ele_t **end);
 
 #endif /* LAB0_QUEUE_H */
