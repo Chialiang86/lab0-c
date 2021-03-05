@@ -1,0 +1,1382 @@
+desc: (none)
+cmd: ./qtest -f ./traces/trace-06-string.cmd
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=214968
+mem_heap_B=32
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=216703
+mem_heap_B=416
+mem_heap_extra_B=128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=220924
+mem_heap_B=1296
+mem_heap_extra_B=264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=223651
+mem_heap_B=5584
+mem_heap_extra_B=368
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=226439
+mem_heap_B=5629
+mem_heap_extra_B=491
+mem_stacks_B=0
+heap_tree=detailed
+n5: 5629 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4096 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4A3AE23: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+    n1: 4096 0x4A3C105: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x4A2D9EB: _IO_getline_info (iogetline.c:60)
+      n1: 4096 0x4A2C849: fgets (iofgets.c:53)
+       n1: 4096 0x110D2B: fgets (stdio2.h:265)
+        n1: 4096 0x110D2B: linenoiseHistoryLoad (linenoise.c:1317)
+         n0: 4096 0x10C28F: main (qtest.c:777)
+ n2: 824 0x10C934: malloc_or_fail (report.c:189)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+ n1: 472 0x4A2CAAD: __fopen_internal (iofopen.c:65)
+  n1: 472 0x4A2CAAD: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n1: 472 0x110CF4: linenoiseHistoryLoad (linenoise.c:1311)
+    n0: 472 0x10C28F: main (qtest.c:777)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 77 0x4A4950E: strdup (strdup.c:42)
+  n1: 72 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 72 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 72 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=228440
+mem_heap_B=5686
+mem_heap_extra_B=554
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=231452
+mem_heap_B=10373
+mem_heap_extra_B=611
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=233161
+mem_heap_B=10442
+mem_heap_extra_B=638
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=235848
+mem_heap_B=10388
+mem_heap_extra_B=620
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=238995
+mem_heap_B=10390
+mem_heap_extra_B=634
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=242848
+mem_heap_B=10449
+mem_heap_extra_B=655
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=246151
+mem_heap_B=10479
+mem_heap_extra_B=633
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=250115
+mem_heap_B=11162
+mem_heap_extra_B=838
+mem_stacks_B=0
+heap_tree=detailed
+n6: 11162 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 724 0x10DE7E: test_malloc (harness.c:138)
+  n1: 380 0x10E33A: add_ele (queue.c:51)
+   n1: 380 0x10E39E: q_insert_head (queue.c:76)
+    n1: 380 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 380 0x10CE65: interpret_cmda (console.c:221)
+      n1: 380 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 380 0x10DB3F: cmd_select (console.c:594)
+        n1: 380 0x10DE0C: run_console (console.c:667)
+         n0: 380 0x10C2BF: main (qtest.c:788)
+  n1: 280 0x10E316: add_ele (queue.c:46)
+   n1: 280 0x10E39E: q_insert_head (queue.c:76)
+    n1: 280 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 280 0x10CE65: interpret_cmda (console.c:221)
+      n1: 280 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 280 0x10DB3F: cmd_select (console.c:594)
+        n1: 280 0x10DE0C: run_console (console.c:667)
+         n0: 280 0x10C2BF: main (qtest.c:788)
+  n0: 64 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 65 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=256216
+mem_heap_B=11162
+mem_heap_extra_B=838
+mem_stacks_B=0
+heap_tree=detailed
+n6: 11162 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 724 0x10DE7E: test_malloc (harness.c:138)
+  n1: 380 0x10E33A: add_ele (queue.c:51)
+   n1: 380 0x10E39E: q_insert_head (queue.c:76)
+    n1: 380 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 380 0x10CE65: interpret_cmda (console.c:221)
+      n1: 380 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 380 0x10DB3F: cmd_select (console.c:594)
+        n1: 380 0x10DE0C: run_console (console.c:667)
+         n0: 380 0x10C2BF: main (qtest.c:788)
+  n1: 280 0x10E316: add_ele (queue.c:46)
+   n1: 280 0x10E39E: q_insert_head (queue.c:76)
+    n1: 280 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 280 0x10CE65: interpret_cmda (console.c:221)
+      n1: 280 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 280 0x10DB3F: cmd_select (console.c:594)
+        n1: 280 0x10DE0C: run_console (console.c:667)
+         n0: 280 0x10C2BF: main (qtest.c:788)
+  n0: 64 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 65 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=258373
+mem_heap_B=11139
+mem_heap_extra_B=773
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=262302
+mem_heap_B=11822
+mem_heap_extra_B=978
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=273086
+mem_heap_B=11822
+mem_heap_extra_B=978
+mem_stacks_B=0
+heap_tree=detailed
+n6: 11822 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 1384 0x10DE7E: test_malloc (harness.c:138)
+  n2: 760 0x10E33A: add_ele (queue.c:51)
+   n1: 380 0x10E39E: q_insert_head (queue.c:76)
+    n1: 380 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 380 0x10CE65: interpret_cmda (console.c:221)
+      n1: 380 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 380 0x10DB3F: cmd_select (console.c:594)
+        n1: 380 0x10DE0C: run_console (console.c:667)
+         n0: 380 0x10C2BF: main (qtest.c:788)
+   n1: 380 0x10E3EE: q_insert_tail (queue.c:101)
+    n1: 380 0x10B9BC: do_insert_tail (qtest.c:300)
+     n1: 380 0x10CE65: interpret_cmda (console.c:221)
+      n1: 380 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 380 0x10DB3F: cmd_select (console.c:594)
+        n1: 380 0x10DE0C: run_console (console.c:667)
+         n0: 380 0x10C2BF: main (qtest.c:788)
+  n2: 560 0x10E316: add_ele (queue.c:46)
+   n1: 280 0x10E39E: q_insert_head (queue.c:76)
+    n1: 280 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 280 0x10CE65: interpret_cmda (console.c:221)
+      n1: 280 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 280 0x10DB3F: cmd_select (console.c:594)
+        n1: 280 0x10DE0C: run_console (console.c:667)
+         n0: 280 0x10C2BF: main (qtest.c:788)
+   n1: 280 0x10E3EE: q_insert_tail (queue.c:101)
+    n1: 280 0x10B9BC: do_insert_tail (qtest.c:300)
+     n1: 280 0x10CE65: interpret_cmda (console.c:221)
+      n1: 280 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 280 0x10DB3F: cmd_select (console.c:594)
+        n1: 280 0x10DE0C: run_console (console.c:667)
+         n0: 280 0x10C2BF: main (qtest.c:788)
+  n0: 64 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 65 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=277404
+mem_heap_B=14886
+mem_heap_extra_B=1026
+mem_stacks_B=0
+heap_tree=peak
+n7: 14886 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 2049 0x10B3B4: do_remove_head (qtest.c:333)
+  n1: 2049 0x10CE65: interpret_cmda (console.c:221)
+   n1: 2049 0x10D2FC: interpret_cmd (console.c:244)
+    n1: 2049 0x10DB3F: cmd_select (console.c:594)
+     n1: 2049 0x10DE0C: run_console (console.c:667)
+      n0: 2049 0x10C2BF: main (qtest.c:788)
+ n3: 1384 0x10DE7E: test_malloc (harness.c:138)
+  n2: 760 0x10E33A: add_ele (queue.c:51)
+   n1: 380 0x10E39E: q_insert_head (queue.c:76)
+    n1: 380 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 380 0x10CE65: interpret_cmda (console.c:221)
+      n1: 380 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 380 0x10DB3F: cmd_select (console.c:594)
+        n1: 380 0x10DE0C: run_console (console.c:667)
+         n0: 380 0x10C2BF: main (qtest.c:788)
+   n1: 380 0x10E3EE: q_insert_tail (queue.c:101)
+    n1: 380 0x10B9BC: do_insert_tail (qtest.c:300)
+     n1: 380 0x10CE65: interpret_cmda (console.c:221)
+      n1: 380 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 380 0x10DB3F: cmd_select (console.c:594)
+        n1: 380 0x10DE0C: run_console (console.c:667)
+         n0: 380 0x10C2BF: main (qtest.c:788)
+  n2: 560 0x10E316: add_ele (queue.c:46)
+   n1: 280 0x10E39E: q_insert_head (queue.c:76)
+    n1: 280 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 280 0x10CE65: interpret_cmda (console.c:221)
+      n1: 280 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 280 0x10DB3F: cmd_select (console.c:594)
+        n1: 280 0x10DE0C: run_console (console.c:667)
+         n0: 280 0x10C2BF: main (qtest.c:788)
+   n1: 280 0x10E3EE: q_insert_tail (queue.c:101)
+    n1: 280 0x10B9BC: do_insert_tail (qtest.c:300)
+     n1: 280 0x10CE65: interpret_cmda (console.c:221)
+      n1: 280 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 280 0x10DB3F: cmd_select (console.c:594)
+        n1: 280 0x10DE0C: run_console (console.c:667)
+         n0: 280 0x10C2BF: main (qtest.c:788)
+  n0: 64 in 1 place, below massif's threshold (1.00%)
+ n1: 1025 0x10B3D0: do_remove_head (qtest.c:340)
+  n1: 1025 0x10CE65: interpret_cmda (console.c:221)
+   n1: 1025 0x10D2FC: interpret_cmd (console.c:244)
+    n1: 1025 0x10DB3F: cmd_select (console.c:594)
+     n1: 1025 0x10DE0C: run_console (console.c:667)
+      n0: 1025 0x10C2BF: main (qtest.c:788)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 204 in 4 places, all below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+#-----------
+snapshot=19
+#-----------
+time=277561
+mem_heap_B=14754
+mem_heap_extra_B=998
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=295539
+mem_heap_B=12705
+mem_heap_extra_B=975
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=297432
+mem_heap_B=11650
+mem_heap_extra_B=918
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=307767
+mem_heap_B=11633
+mem_heap_extra_B=887
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=311860
+mem_heap_B=14678
+mem_heap_extra_B=986
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=328996
+mem_heap_B=12573
+mem_heap_extra_B=947
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=332544
+mem_heap_B=11493
+mem_heap_extra_B=843
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=336185
+mem_heap_B=12553
+mem_heap_extra_B=903
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=352352
+mem_heap_B=11442
+mem_heap_extra_B=878
+mem_stacks_B=0
+heap_tree=detailed
+n6: 11442 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 988 0x10DE7E: test_malloc (harness.c:138)
+  n2: 532 0x10E33A: add_ele (queue.c:51)
+   n1: 304 0x10E39E: q_insert_head (queue.c:76)
+    n1: 304 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 304 0x10CE65: interpret_cmda (console.c:221)
+      n1: 304 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 304 0x10DB3F: cmd_select (console.c:594)
+        n1: 304 0x10DE0C: run_console (console.c:667)
+         n0: 304 0x10C2BF: main (qtest.c:788)
+   n1: 228 0x10E3EE: q_insert_tail (queue.c:101)
+    n1: 228 0x10B9BC: do_insert_tail (qtest.c:300)
+     n1: 228 0x10CE65: interpret_cmda (console.c:221)
+      n1: 228 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 228 0x10DB3F: cmd_select (console.c:594)
+        n1: 228 0x10DE0C: run_console (console.c:667)
+         n0: 228 0x10C2BF: main (qtest.c:788)
+  n2: 392 0x10E316: add_ele (queue.c:46)
+   n1: 224 0x10E39E: q_insert_head (queue.c:76)
+    n1: 224 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 224 0x10CE65: interpret_cmda (console.c:221)
+      n1: 224 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 224 0x10DB3F: cmd_select (console.c:594)
+        n1: 224 0x10DE0C: run_console (console.c:667)
+         n0: 224 0x10C2BF: main (qtest.c:788)
+   n1: 168 0x10E3EE: q_insert_tail (queue.c:101)
+    n1: 168 0x10B9BC: do_insert_tail (qtest.c:300)
+     n1: 168 0x10CE65: interpret_cmda (console.c:221)
+      n1: 168 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 168 0x10DB3F: cmd_select (console.c:594)
+        n1: 168 0x10DE0C: run_console (console.c:667)
+         n0: 168 0x10C2BF: main (qtest.c:788)
+  n0: 64 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 81 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=354369
+mem_heap_B=11377
+mem_heap_extra_B=847
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=362681
+mem_heap_B=11369
+mem_heap_extra_B=831
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=366015
+mem_heap_B=11361
+mem_heap_extra_B=815
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=369628
+mem_heap_B=12415
+mem_heap_extra_B=881
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=384868
+mem_heap_B=11306
+mem_heap_extra_B=854
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=388409
+mem_heap_B=11229
+mem_heap_extra_B=787
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=391763
+mem_heap_B=12262
+mem_heap_extra_B=858
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=406028
+mem_heap_B=11160
+mem_heap_extra_B=824
+mem_stacks_B=0
+heap_tree=detailed
+n6: 11160 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 724 0x10DE7E: test_malloc (harness.c:138)
+  n2: 380 0x10E33A: add_ele (queue.c:51)
+   n1: 228 0x10E3EE: q_insert_tail (queue.c:101)
+    n1: 228 0x10B9BC: do_insert_tail (qtest.c:300)
+     n1: 228 0x10CE65: interpret_cmda (console.c:221)
+      n1: 228 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 228 0x10DB3F: cmd_select (console.c:594)
+        n1: 228 0x10DE0C: run_console (console.c:667)
+         n0: 228 0x10C2BF: main (qtest.c:788)
+   n1: 152 0x10E39E: q_insert_head (queue.c:76)
+    n1: 152 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 152 0x10CE65: interpret_cmda (console.c:221)
+      n1: 152 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 152 0x10DB3F: cmd_select (console.c:594)
+        n1: 152 0x10DE0C: run_console (console.c:667)
+         n0: 152 0x10C2BF: main (qtest.c:788)
+  n2: 280 0x10E316: add_ele (queue.c:46)
+   n1: 168 0x10E3EE: q_insert_tail (queue.c:101)
+    n1: 168 0x10B9BC: do_insert_tail (qtest.c:300)
+     n1: 168 0x10CE65: interpret_cmda (console.c:221)
+      n1: 168 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 168 0x10DB3F: cmd_select (console.c:594)
+        n1: 168 0x10DE0C: run_console (console.c:667)
+         n0: 168 0x10C2BF: main (qtest.c:788)
+   n0: 112 in 1 place, below massif's threshold (1.00%)
+  n0: 64 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 63 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=408036
+mem_heap_B=11113
+mem_heap_extra_B=791
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=414454
+mem_heap_B=11105
+mem_heap_extra_B=775
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=417788
+mem_heap_B=11097
+mem_heap_extra_B=759
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=421140
+mem_heap_B=12133
+mem_heap_extra_B=827
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=434435
+mem_heap_B=11030
+mem_heap_extra_B=794
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=437917
+mem_heap_B=10965
+mem_heap_extra_B=731
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=440772
+mem_heap_B=11956
+mem_heap_extra_B=796
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=453056
+mem_heap_B=10868
+mem_heap_extra_B=764
+mem_stacks_B=0
+heap_tree=detailed
+n6: 10868 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 460 0x10DE7E: test_malloc (harness.c:138)
+  n2: 228 0x10E33A: add_ele (queue.c:51)
+   n1: 152 0x10E39E: q_insert_head (queue.c:76)
+    n1: 152 0x10BC57: do_insert_head (qtest.c:215)
+     n1: 152 0x10CE65: interpret_cmda (console.c:221)
+      n1: 152 0x10D2FC: interpret_cmd (console.c:244)
+       n1: 152 0x10DB3F: cmd_select (console.c:594)
+        n1: 152 0x10DE0C: run_console (console.c:667)
+         n0: 152 0x10C2BF: main (qtest.c:788)
+   n0: 76 in 1 place, below massif's threshold (1.00%)
+  n1: 168 0x10E316: add_ele (queue.c:46)
+   n0: 168 in 2 places, all below massif's threshold (1.00%)
+  n0: 64 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 35 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=455050
+mem_heap_B=10849
+mem_heap_extra_B=735
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=459574
+mem_heap_B=10841
+mem_heap_extra_B=719
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=462855
+mem_heap_B=10833
+mem_heap_extra_B=703
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=465748
+mem_heap_B=11827
+mem_heap_extra_B=765
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=477106
+mem_heap_B=10738
+mem_heap_extra_B=734
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=477293
+mem_heap_B=10717
+mem_heap_extra_B=683
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=478858
+mem_heap_B=10720
+mem_heap_extra_B=696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=479196
+mem_heap_B=10744
+mem_heap_extra_B=728
+mem_stacks_B=0
+heap_tree=detailed
+n6: 10744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9059 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 19 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 328 0x10DE7E: test_malloc (harness.c:138)
+  n0: 176 in 2 places, all below massif's threshold (1.00%)
+  n1: 152 0x10E33A: add_ele (queue.c:51)
+   n0: 152 in 2 places, all below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 24 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=479423
+mem_heap_B=10758
+mem_heap_extra_B=762
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=479694
+mem_heap_B=10743
+mem_heap_extra_B=761
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=480483
+mem_heap_B=10736
+mem_heap_extra_B=744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=480677
+mem_heap_B=10701
+mem_heap_extra_B=675
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=482577
+mem_heap_B=10741
+mem_heap_extra_B=691
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=483187
+mem_heap_B=10757
+mem_heap_extra_B=715
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=483437
+mem_heap_B=10796
+mem_heap_extra_B=756
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=483601
+mem_heap_B=10756
+mem_heap_extra_B=740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=484038
+mem_heap_B=11881
+mem_heap_extra_B=759
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=484563
+mem_heap_B=11906
+mem_heap_extra_B=766
+mem_stacks_B=0
+heap_tree=detailed
+n7: 11906 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1125 0x10B3B4: do_remove_head (qtest.c:333)
+  n1: 1125 0x10CE65: interpret_cmda (console.c:221)
+   n1: 1125 0x10D2FC: interpret_cmd (console.c:244)
+    n1: 1125 0x10DB3F: cmd_select (console.c:594)
+     n1: 1125 0x10DE0C: run_console (console.c:667)
+      n0: 1125 0x10C2BF: main (qtest.c:788)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 252 0x10DE7E: test_malloc (harness.c:138)
+  n0: 252 in 3 places, all below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n0: 156 in 4 places, all below massif's threshold (1.00%)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=62
+#-----------
+time=495130
+mem_heap_B=10725
+mem_heap_extra_B=731
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=495344
+mem_heap_B=10585
+mem_heap_extra_B=671
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=496731
+mem_heap_B=10578
+mem_heap_extra_B=662
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=496937
+mem_heap_B=10586
+mem_heap_extra_B=678
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=497152
+mem_heap_B=10585
+mem_heap_extra_B=679
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=499774
+mem_heap_B=10577
+mem_heap_extra_B=663
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=501109
+mem_heap_B=10575
+mem_heap_extra_B=665
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=501276
+mem_heap_B=10583
+mem_heap_extra_B=681
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=501485
+mem_heap_B=10582
+mem_heap_extra_B=682
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=505025
+mem_heap_B=10577
+mem_heap_extra_B=663
+mem_stacks_B=0
+heap_tree=detailed
+n6: 10577 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9040 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 196 0x10DE7E: test_malloc (harness.c:138)
+  n0: 196 in 3 places, all below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 8 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=72
+#-----------
+time=506980
+mem_heap_B=10609
+mem_heap_extra_B=663
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=507590
+mem_heap_B=10625
+mem_heap_extra_B=687
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=507840
+mem_heap_B=10664
+mem_heap_extra_B=728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=508004
+mem_heap_B=10624
+mem_heap_extra_B=712
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=508441
+mem_heap_B=11749
+mem_heap_extra_B=731
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=508955
+mem_heap_B=11774
+mem_heap_extra_B=738
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=518618
+mem_heap_B=10593
+mem_heap_extra_B=703
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=518832
+mem_heap_B=10453
+mem_heap_extra_B=643
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=520167
+mem_heap_B=10443
+mem_heap_extra_B=637
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=520334
+mem_heap_B=10451
+mem_heap_extra_B=653
+mem_stacks_B=0
+heap_tree=detailed
+n5: 10451 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 9046 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 544 0x10D3C4: add_cmd (console.c:125)
+   n0: 544 in 17 places, all below massif's threshold (1.00%)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n0: 6 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 72 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=82
+#-----------
+time=520543
+mem_heap_B=10450
+mem_heap_extra_B=654
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=520836
+mem_heap_B=10386
+mem_heap_extra_B=646
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=521546
+mem_heap_B=10381
+mem_heap_extra_B=627
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=522881
+mem_heap_B=10379
+mem_heap_extra_B=629
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=523048
+mem_heap_B=10387
+mem_heap_extra_B=645
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=523257
+mem_heap_B=10386
+mem_heap_extra_B=646
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=523628
+mem_heap_B=10354
+mem_heap_extra_B=638
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=523832
+mem_heap_B=10226
+mem_heap_extra_B=606
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=524036
+mem_heap_B=10098
+mem_heap_extra_B=574
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=524240
+mem_heap_B=9970
+mem_heap_extra_B=542
+mem_stacks_B=0
+heap_tree=detailed
+n5: 9970 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 8624 0x10C934: malloc_or_fail (report.c:189)
+  n1: 8216 0x10CFBD: push_file (console.c:450)
+   n1: 8216 0x10DD7D: run_console (console.c:652)
+    n0: 8216 0x10C2BF: main (qtest.c:788)
+  n1: 280 0x10D43E: add_param (console.c:146)
+   n0: 280 in 7 places, all below massif's threshold (1.00%)
+  n1: 128 0x10D3C4: add_cmd (console.c:125)
+   n0: 128 in 17 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A2BE83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4A3C04F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A3B0AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A39834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4A39834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4A20AF1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x10C8B7: vfprintf (stdio2.h:130)
+        n1: 1024 0x10C8B7: report_noreturn (report.c:122)
+         n1: 1024 0x10DAFD: readline (console.c:527)
+          n1: 1024 0x10DAFD: cmd_select (console.c:592)
+           n1: 1024 0x10DE0C: run_console (console.c:667)
+            n0: 1024 0x10C2BF: main (qtest.c:788)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x110148: linenoiseHistoryAdd (linenoise.c:1224)
+  n1: 160 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+   n0: 160 0x10C28F: main (qtest.c:777)
+ n2: 149 0x4A4950E: strdup (strdup.c:42)
+  n1: 144 0x1100FC: linenoiseHistoryAdd (linenoise.c:1236)
+   n1: 144 0x110D1B: linenoiseHistoryLoad (linenoise.c:1325)
+    n0: 144 0x10C28F: main (qtest.c:777)
+  n0: 5 in 1 place, below massif's threshold (1.00%)
+ n0: 13 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=92
+#-----------
+time=524444
+mem_heap_B=9842
+mem_heap_extra_B=510
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=524651
+mem_heap_B=9682
+mem_heap_extra_B=446
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=524877
+mem_heap_B=1346
+mem_heap_extra_B=382
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=525710
+mem_heap_B=1341
+mem_heap_extra_B=363
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=96
+#-----------
+time=529318
+mem_heap_B=309
+mem_heap_extra_B=339
+mem_stacks_B=0
+heap_tree=empty

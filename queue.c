@@ -23,17 +23,14 @@ queue_t *q_new()
 /* Free all storage used by queue */
 void q_free(queue_t *q)
 {
-    /* TODO: How about freeing the list elements and the strings? */
-    /* Free queue structure */
     if (!q)
         return;
-    // issue pre can be reduced
     while (q->head) {
-        list_ele_t *pre;
-        pre = q->head;
+        list_ele_t *del;
+        del = q->head;
         q->head = q->head->next;
-        free(pre->value);
-        free(pre);
+        free(del->value);
+        free(del);
     }
     free(q);
 }
@@ -51,6 +48,7 @@ list_ele_t *add_ele(const char *str)
     char *s = malloc(sizeof(char) * (strlen(str) + 1));
     if (!s) {
         free(newh);
+        newh = NULL;
         return NULL;
     }
 
@@ -69,9 +67,6 @@ list_ele_t *add_ele(const char *str)
  */
 bool q_insert_head(queue_t *q, char *s)
 {
-    /* TODO: What should you do if the q is NULL? */
-    /* Don't forget to allocate space for the string and copy it */
-    /* What if either call to malloc returns NULL? */
     if (!q)
         return false;
 
@@ -97,9 +92,6 @@ bool q_insert_head(queue_t *q, char *s)
  */
 bool q_insert_tail(queue_t *q, char *s)
 {
-    /* TODO: You need to write the complete code for this function */
-    /* Remember: It should operate in O(1) time */
-    /* TODO: Remove the above comment when you are about to implement. */
     if (!q)
         return false;
 
@@ -130,8 +122,6 @@ bool q_insert_tail(queue_t *q, char *s)
  */
 bool q_remove_head(queue_t *q, char *sp, size_t bufsize)
 {
-    /* TODO: You need to fix up this code. */
-    /* TODO: Remove the above comment when you are about to implement. */
     if (!q || !q->head)
         return false;
 
@@ -185,6 +175,13 @@ void q_reverse(queue_t *q)
     q->head = pivot;
 }
 
+// void print(queue_t *q)
+// {
+//     for (list_ele_t * ele = q->head; ele; ele = ele->next)
+//         printf("%s ", ele->value);
+//     printf("\n\n");
+// }
+
 /*
  * Sort elements of queue in ascending order
  * No effect if q is NULL or empty. In addition, if q has only one
@@ -195,40 +192,34 @@ void q_sort(queue_t *q)
     if (!q || !q->head)
         return;
 
-    merge_sort(&q);
-}
-
-void merge_sort(queue_t **q)
-{
-    list_ele_t *tmp, *pre_tmp;
     list_ele_t *lpart, *rpart;
-
-    for (unsigned long len = 1; len < (*q)->size; len *= 2) {
-        list_ele_t *pre_tail = NULL, *tail;
-        tmp = (*q)->head;
-        pre_tmp = tmp;
+    list_ele_t *tmp;
+    for (unsigned long len = 1; len < q->size; len *= 2) {
+        list_ele_t *last_tail = NULL, *tail;
+        list_ele_t *last_tmp = tmp;
+        tmp = q->head;
         while (tmp) {
             // add element to left queue
             lpart = tmp;
             for (unsigned long i = 0; i < len && tmp; i++, tmp = tmp->next)
-                pre_tmp = tmp;
-            pre_tmp->next = NULL;
+                last_tmp = tmp;
+            last_tmp->next = NULL;
 
             // add element to right queue
             rpart = tmp;
             for (unsigned long i = 0; i < len && tmp; i++, tmp = tmp->next)
-                pre_tmp = tmp;
-            pre_tmp->next = NULL;
+                last_tmp = tmp;
+            last_tmp->next = NULL;
 
             list_ele_t *res = merge(lpart, rpart, &tail);
-            if (!pre_tail)
-                (*q)->head = res;
+            if (!last_tail)
+                q->head = res;
             else
-                pre_tail->next = res;
+                last_tail->next = res;
 
-            pre_tail = tail;
+            last_tail = tail;
         }
-        (*q)->tail = pre_tmp;
+        q->tail = tail;
     }
 }
 
@@ -237,39 +228,38 @@ list_ele_t *merge(list_ele_t *lpart, list_ele_t *rpart, list_ele_t **end)
     if (!lpart || !rpart)
         return lpart ? lpart : NULL;
 
-    list_ele_t *l_tmp = lpart, *r_tmp = rpart;
     list_ele_t *res_head = NULL, *res_tail;
 
-    if (strcasecmp(l_tmp->value, r_tmp->value) > 0) {
-        res_head = r_tmp;
-        r_tmp = r_tmp->next;
+    if (strcasecmp(lpart->value, rpart->value) > 0) {
+        res_head = rpart;
+        rpart = rpart->next;
     } else {
-        res_head = l_tmp;
-        l_tmp = l_tmp->next;
+        res_head = lpart;
+        lpart = lpart->next;
     }
 
     res_tail = res_head;
-    while (l_tmp || r_tmp) {
-        if (l_tmp && r_tmp) {
-            if (strcasecmp(l_tmp->value, r_tmp->value) > 0) {
-                res_tail->next = r_tmp;
+    while (lpart || rpart) {
+        if (lpart && rpart) {
+            if (strcasecmp(lpart->value, rpart->value) > 0) {
+                res_tail->next = rpart;
                 res_tail = res_tail->next;
-                r_tmp = r_tmp->next;
+                rpart = rpart->next;
             } else {
-                res_tail->next = l_tmp;
+                res_tail->next = lpart;
                 res_tail = res_tail->next;
-                l_tmp = l_tmp->next;
+                lpart = lpart->next;
             }
         } else {
-            while (l_tmp) {
-                res_tail->next = l_tmp;
+            while (lpart) {
+                res_tail->next = lpart;
                 res_tail = res_tail->next;
-                l_tmp = l_tmp->next;
+                lpart = lpart->next;
             }
-            while (r_tmp) {
-                res_tail->next = r_tmp;
+            while (rpart) {
+                res_tail->next = rpart;
                 res_tail = res_tail->next;
-                r_tmp = r_tmp->next;
+                rpart = rpart->next;
             }
         }
     }
