@@ -266,3 +266,59 @@ list_ele_t *merge(list_ele_t *lpart, list_ele_t *rpart, list_ele_t **end)
     *end = res_tail;
     return res_head;
 }
+// list_ele_t *merge(list_ele_t *l, list_ele_t *r)
+// {
+//     if (!l || !r)
+//         return l ? l : (r ? r : NULL);
+
+//     list_ele_t *head;
+
+//     if (strcasecmp(l->value, r->value) > 0) {
+//         head = r;
+//         head->next = merge(l, r->next);
+//     } else {
+//         head = l;
+//         head->next = merge(l->next, r);
+//     }
+
+//     return head;
+// }
+
+// list_ele_t *merge_sort(list_ele_t *head)
+// {
+//     if (!head)
+//         return NULL;
+//     if (!head->next)
+//         return head;
+
+//     list_ele_t *slow = head;
+//     list_ele_t *fast = head->next;
+
+//     while (fast && fast->next) {
+//         slow = slow->next;
+//         fast = fast->next->next;
+//     }
+
+//     fast = slow->next;
+//     slow->next = NULL;
+
+//     slow = merge_sort(head);
+//     fast = merge_sort(fast);
+
+//     head = merge(slow, fast);
+
+//     return head;
+// }
+
+// void q_sort(queue_t *q)
+// {
+//     if (!q || q->size <= 1)
+//         return;
+
+//     q->head = merge_sort(q->head);
+
+//     list_ele_t *tmp = q->head;
+//     while (tmp->next)
+//         tmp = tmp->next;
+//     q->tail = tmp;
+// }
